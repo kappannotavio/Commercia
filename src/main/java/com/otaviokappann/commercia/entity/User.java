@@ -30,6 +30,13 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    //Construtor
+    public User(String email, String senha, Role role) {
+        this.email = email;
+        this.senha = senha;
+        this.role = role;
+    }
+
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Pedido> listaDePedidos = new ArrayList<>();
 
