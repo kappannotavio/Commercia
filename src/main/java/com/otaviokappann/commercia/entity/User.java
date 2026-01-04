@@ -28,13 +28,12 @@ public class User implements UserDetails {
     private String senha;
 
     @Enumerated(EnumType.STRING)
-    private Role role;
+    private Role role = Role.CLIENTE; //Valor Default
 
     //Construtor
-    public User(String email, String senha, Role role) {
+    public User(String email, String senha) {
         this.email = email;
         this.senha = senha;
-        this.role = role;
     }
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)

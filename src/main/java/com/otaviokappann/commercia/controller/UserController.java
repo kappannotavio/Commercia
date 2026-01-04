@@ -9,21 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/users")
 public class UserController {
 
-    @PostMapping("/register")
-    public void registrar() {
-
-    }
-
     @GetMapping("/test")
     public String teste(){
         return "Testudao";
     }
-
-
-    @PostMapping("/login")
-    public void login() {
-
-    }
-
 
 }
